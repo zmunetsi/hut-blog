@@ -1,3 +1,9 @@
+
+<hr>
+  <div class="uppernav">
+    <button type="button" name="button"><%= link_to "Create Post", new_post_path %></button>
+  </div>
+<br>
 <div class="jumbotron">
   <h1>Welcome to HutofCode Blog</h1>
   <p>This is a multi-user blog where users get to share their coding stories with the community</p>
@@ -14,10 +20,5 @@
 
 </div>
 <div class="calltoaction">
-  <button type="button" name="button">Get Started Now</button>
-</div><hr>
-<div class="lowernav">
-  <%= link_to "About Us", about_path %>
-  <%= link_to "Contact Us", contact_path %>
+  <button type="button" name="button"><%= link_to 'Get Started Now', new_post_path %></button>
 </div>
-<hr>

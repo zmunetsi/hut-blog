@@ -1,0 +1,12 @@
+<h1>Listing all posts</h1>
+<div class="">
+  <table>
+    <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.content %></td>
+      <td>| Created by:Munetsi</td>
+    </tr>
+    <% end %>
+  </table>
+</div>
