@@ -18,9 +18,29 @@ class PostsController < ApplicationController
   end
 
   def show
-
   end
 
+  def edit
+  end
+
+  def update
+    if @post.update_attributes(post_params)
+    flash[:notice] = "Successfully updated post!"
+    redirect_to post_path(@posts)
+  else
+    flash[:alert] = "Error updating post!"
+    render :edit
+  end
+  end
+
+  def destroy
+    if @post.destroy
+    flash[:notice] = "Successfully deleted post!"
+    redirect_to posts_path
+ else
+   flash[:alert] = "Error updating post!"
+ end
+  end
   private
 
   def post_params
