@@ -4,8 +4,15 @@
     <% @posts.each do |post| %>
     <tr>
       <td><%= post.title %></td>
-      <td><%= post.content %></td>
-      <td>| Created by:Munetsi</td>
+      <td><%= post.content.truncate(50) %></td>
+      <td>
+        <tr>
+          <td>Created by Munetsi</td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+      </td>
     </tr>
     <% end %>
   </table>
